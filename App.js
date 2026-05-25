@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import mqttService from './src/services/mqttService';
 import StatusModal from './src/components/StatusModal';
 import LightControl from './src/components/LightControl';
-//import Gauges from './src/components/Gauges';
+import Gauges from './src/components/Gauges';
 
 const mqtt = new mqttService();
 
@@ -65,7 +65,7 @@ export default function App() {
 
     <LightControl isLightOn={isLightOn} onToggle={toggleLight} />
 
-    {/* <Gauges temp={temp} hum={hum} /> */}
+    <Gauges temp={temp} hum={hum} />
 
     {/* Componente de Status de Conexão */}
     <StatusModal
